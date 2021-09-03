@@ -1,3 +1,11 @@
+const model = document.getElementById('result__model');
+const scoreTag = document.getElementById('result__score');
+const agreement = document.getElementById('result__agreement');
+const subject =   document.getElementById('result__subjectivity');
+const confidence = document.getElementById('result__confidence');
+const irony = document.getElementById('result__irony');
+
+
 function handleSubmit(event) {
     event.preventDefault()
 
@@ -16,12 +24,12 @@ function handleSubmit(event) {
         })
             .then(res => res.json())
             .then(function (res) {
-                document.getElementById('model').innerHTML = 'Model: ' + res.model;
-                document.getElementById('score_tag').innerHTML = 'Score: ' + res.score_tag;
-                document.getElementById('agreement').innerHTML = 'Agreement: ' + res.agreement;
-                document.getElementById('subjectivity').innerHTML = 'Subjectivity: ' + res.subjectivity;
-                document.getElementById('confidence').innerHTML = 'Confidence: ' + res.confidence;
-                document.getElementById('irony').innerHTML = 'Irony: ' + res.irony;
+                model.innerHTML = 'Model: ' + res.model;
+                scoreTag.innerHTML = 'Score: ' + res.score_tag;
+                agreement.innerHTML = 'Agreement: ' + res.agreement;
+                subject.innerHTML = 'Subjectivity: ' + res.subjectivity;
+                confidence.innerHTML = 'Confidence: ' + res.confidence;
+                irony.innerHTML = 'Irony: ' + res.irony;
             })
     } else {
         alert ('Please type in a valid website')

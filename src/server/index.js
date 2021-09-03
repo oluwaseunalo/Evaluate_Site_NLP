@@ -6,12 +6,11 @@ const mockAPIResponse = require('./mockAPI.js')
 
 const app = express();
 
-/* Middleware*/
-//Configuring the latest express version with body-parser in the default.
+
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-// Cors for cross origin allowance
+
 const cors = require('cors');
 app.use(cors());
 
