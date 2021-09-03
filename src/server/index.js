@@ -4,7 +4,17 @@ var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 
-const app = express()
+const app = express();
+
+/* Middleware*/
+//Configuring the latest express version with body-parser in the default.
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
+// Cors for cross origin allowance
+const cors = require('cors');
+app.use(cors());
+
 
 app.use(express.static('dist'))
 
@@ -26,5 +36,15 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-
+app.post('/input', async(req, res) => {
+    const response = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&url=${req.body.formInput}&lang=en`);
+    try {
+        const data = await response.json();
+        console.log(data);
+        res.send(data);
+      }
+    catch (error) {
+    console.log("error", error);
+    }
+});
  
