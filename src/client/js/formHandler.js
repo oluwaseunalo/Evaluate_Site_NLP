@@ -10,11 +10,12 @@ function handleSubmit(event) {
     event.preventDefault()
 
     // check what text was put into the form field
-    let formInput = document.getElementById('name').value
+    let formInput = document.getElementById('name').value;
+    const data = {formInput};
     console.log("::: Form Submitted :::")
     
     if (Client.checkForName(formInput)) {
-        fetch('/input', {
+        fetch('http://localhost:8084/input', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
