@@ -1,7 +1,7 @@
 const model = document.getElementById('result__model');
 const scoreTag = document.getElementById('result__score');
 const agreement = document.getElementById('result__agreement');
-const subject =   document.getElementById('result__subjectivity');
+const subject =   document.getElementById('result__subjective');
 const confidence = document.getElementById('result__confidence');
 const irony = document.getElementById('result__irony');
 
