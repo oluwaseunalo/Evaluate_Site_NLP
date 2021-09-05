@@ -24,7 +24,7 @@
                 </form>
             </section>
 
-            <section>
+            <section class="form__analysis">
                 <strong>Form Results:</strong>
                 <div id="results"></div>
                 <div id="result__model"></div>
@@ -37,8 +37,16 @@
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p></p>
         </footer>
-
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
     </body>
 </html>

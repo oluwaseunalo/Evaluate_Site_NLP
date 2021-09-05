@@ -1,11 +1,3 @@
-const model = document.getElementById('result__model');
-const scoreTag = document.getElementById('result__score');
-const agreement = document.getElementById('result__agreement');
-const subject =   document.getElementById('result__subjective');
-const confidence = document.getElementById('result__confidence');
-const irony = document.getElementById('result__irony');
-
-
 function handleSubmit(event) {
     event.preventDefault()
 
@@ -25,12 +17,12 @@ function handleSubmit(event) {
         })
             .then(res => res.json())
             .then(function (res) {
-                model.innerHTML = 'Model: ' + res.model;
-                scoreTag.innerHTML = 'Score: ' + res.score_tag;
-                agreement.innerHTML = 'Agreement: ' + res.agreement;
-                subject.innerHTML = 'Subjectivity: ' + res.subjectivity;
-                confidence.innerHTML = 'Confidence: ' + res.confidence;
-                irony.innerHTML = 'Irony: ' + res.irony;
+                document.getElementById('result__model').innerHTML = 'Model: ' + res.model;
+                document.getElementById('result__score').innerHTML = 'Score: ' + res.score_tag;
+                document.getElementById('result__agreement').innerHTML = 'Agreement: ' + res.agreement;
+                document.getElementById('result__subjective').innerHTML = 'Subjectivity: ' + res.subjectivity;
+                document.getElementById('result__confidence').innerHTML = 'Confidence: ' + res.confidence;
+                document.getElementById('result__irony').innerHTML = 'Irony: ' + res.irony;
             })
     } else {
         alert ('Please type in a valid website')

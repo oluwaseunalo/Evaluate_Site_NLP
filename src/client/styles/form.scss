@@ -7,6 +7,49 @@ form {
 input {
     padding: 5px 20px;
     width: 100%;
-    line-height: 16px;
+    line-height: 30px;
     margin: 10px 0;
+    border: solid 2px wheat;
+    height: 5%;
+}
+
+.form__analysis {
+    results {
+        border: solid 2px wheat;
+        height: 5%;
+        color: yellow;
+    }
+
+    result__model {
+        border: solid 2px wheat;
+        height: 5%;
+        color: yellow;
+    }
+    result__score {
+        border: solid 2px wheat;
+        height: 5%;
+        color: yellow;
+    }
+    result__agreement {
+        border: solid 2px wheat;
+        height: 5%;
+        color: yellow;
+    }
+
+    result__subjective {
+        border: solid 2px wheat;
+        height: 5%;
+        color: yellow;
+    }
+
+    result__confidence {
+        border: solid 2px wheat;
+        height: 5%;
+        color: yellow;
+    }
+    result__irony {
+        border: solid 2px wheat;
+        height: 5%;
+        color: yellow;
+    }
 }
