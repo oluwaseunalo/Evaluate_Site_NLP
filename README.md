@@ -9,7 +9,7 @@ In this repository, I built a web tool that allows users to run Natural Language
 - Run the express server using the command npm start
 - Open the website at http://localhost:8084
 
-# Basic Operations
+## Basic Operations
 - Setting up Webpack.
 - Installation of babel and sass loaders.
 - Installation of plugins.
